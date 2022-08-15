@@ -1,0 +1,12 @@
+.homepage-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+ 
+}
+
+.video-card:hover{
+  cursor: pointer;
+  transform: scaleZ(10px);
+  background-color: red;
+}

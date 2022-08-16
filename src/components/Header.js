@@ -24,7 +24,7 @@ const  Header = () => {
 
   const settings = [{name: 'Logout', func: () => {
     localStorage.clear();
-    navigate('/auth')
+    navigate('/')
   }}];
 
   const loggedIn = JSON.parse(localStorage.getItem('signed_in'));
@@ -48,7 +48,7 @@ const  Header = () => {
       </div>
       <div className="user-container">
         {loggedIn && <VideoCallOutlined onClick={() => setAddModal(true)} className="header-icon"/>}
-        {loggedIn && <WidgetsOutlined className="header-icon"/>}
+        {/* {loggedIn && <WidgetsOutlined className="header-icon"/>} */}
         {/* <Avatar src={require("../assets/images/onnorokom_logo.png")} className="avatar"/> */}
         <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
@@ -74,7 +74,7 @@ const  Header = () => {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting.name} onClick={handleCloseUserMenu}>
-                  <Typography onClick={setting.func} textAlign="center">{setting.name}</Typography>
+                  <Typography onClick={setting.func} textalign="center">{setting.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>}

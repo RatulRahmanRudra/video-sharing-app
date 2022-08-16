@@ -5,6 +5,8 @@ import './App.css';
 
 
 function App() {
+console.log = () => {}
+
   return (
     <div className="App">
     {/* header <Header/> */}
@@ -14,7 +16,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Homepage/>}/>
           <Route path="/auth" element={<Auth/>}/>
-          <Route path="/:id" element={<Player/>}/>
+          <Route path="/:id/:uuid" element={<Player/>}/>
       </Routes>
       </div>
     </Router>

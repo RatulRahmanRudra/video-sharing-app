@@ -20,7 +20,7 @@ const Auth = () => {
 			"isChecked": 1
 		})
 		localStorage.setItem('user_data', JSON.stringify(res.data.payload.data))
-		localStorage.setItem('token', JSON.stringify(res.data.payload.data?.accessToken))
+		localStorage.setItem('token', JSON.stringify(`Bearer ${res.data.payload.data?.accessToken}`))
 		localStorage.setItem('signed_in', JSON.stringify(true))
 		navigate('/');
 	}

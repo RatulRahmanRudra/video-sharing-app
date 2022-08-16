@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   width: 260px;
-  height: 100%;
   background-color: #f5f5f5;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -59,9 +58,11 @@
 .video-values {
   border-left: 1px solid rgba(26, 26, 26, 0.158);
   display: flex;
+  justify-content: space-between;
+  /* background-color: red; */
   width: 100%;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   margin-top: 5px;
 }
 
@@ -71,8 +72,14 @@
   color: rgb(26, 26, 26);
   overflow: hidden;
   margin-left: 3px;
-  text-overflow: ellipsis;
+  /* text-overflow: ellipsis; */
   white-space: nowrap;
 }
 
 
+.video-card-container:hover{
+  cursor: pointer;
+  background-color: rgba(97, 92, 111, 0.167);
+  transform: translateZ(10px);
+  transition: all 0.4s ease;
+}

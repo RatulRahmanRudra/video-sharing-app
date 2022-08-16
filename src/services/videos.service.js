@@ -4,7 +4,7 @@ import { videoLinks } from "../mock/data";
 
 export const getAllVideos = async () => {
     try {
-      const res = await useAxios.get("video/pagination");
+      const res = await useAxios.get("video/video-list");
 			// return videoLinks; //mock links 
       return res;
 
@@ -22,9 +22,29 @@ export const addNewVideo = async(payload) => {
   }
 }
 
-export const countView = async (videoId) => {
+export const countView = async (uuid) => {
   try {
-    const res = await useAxios.get(`video/increment-view-count/${videoId}`)
+    const res = await useAxios.get(`video/increment-view-count/${uuid}`)
+    return res;
+  } catch (error) {
+    return error
+  }
+}
+
+
+export const getVideoInfo = async(uuid) => {
+  try {
+    const res = await useAxios.get(`video/single-video-info/${uuid}`)
+    return res;
+  } catch (error) {
+    return error
+  }
+}
+
+
+export const addReaction = async (payload) => {
+  try {
+    const res = await useAxios.post(`video/reaction`, payload);
     return res;
   } catch (error) {
     return error
